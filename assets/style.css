@@ -58,6 +58,65 @@ body {
     text-align: center;
 }
 
+.article {
+    display: flex;
+}
+
+    .article-content, .article-sidebar {
+        padding: 15px;
+    }
+
+    .article-content {
+        flex: 2;
+        order: 1;
+        padding-left: 0;
+    }
+
+    .article-sidebar {
+        flex: 1;
+        order: 2;
+        background-color: #eeeeee;
+    }
+
+.resources {
+    list-style-type: none;
+    padding: 0;
+}
+
+.resource {
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.resource:before {
+    background-color: #444444;
+    color: #ffffff;
+    content: 'R';
+    padding: 10px 15px;
+    margin-right: 10px;
+    border-radius: 20px;
+}
+
+    .resource.text:before {
+        background-color: #354C41;
+        content: 'T';
+    }
+
+    .resource.book:before {
+        background-color: #9A6337;
+        content: 'B';
+    }
+
+    .resource.course:before {
+        background-color: #24424C;
+        content: 'C';
+    }
+
+    .resource.youtube:before {
+        background-color: #683D42;
+        content: 'Y';
+    }
+
 @media only screen and (max-width: 768px) {
     .nav-content {
         flex-direction: column;
