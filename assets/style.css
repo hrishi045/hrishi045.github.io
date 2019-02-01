@@ -2,6 +2,16 @@ body {
     font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 }
 
+a {
+    color: #000099;
+    text-decoration: none;
+}
+
+    a:hover, a:focus {
+        color: #000044;
+        text-decoration: underline;
+    }
+
 .header-site-name, .nav-content, .main-content, main {
     position: relative;
     min-width: 1px;
