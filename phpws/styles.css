@@ -4,6 +4,7 @@ html, body {
   margin: 0;
   padding: 0;
   font-family: Roboto, Arial, Helvetica, 'sans-serif';
+  background-color: #cccccc;
 }
 
 header {
@@ -14,6 +15,7 @@ header {
 
 header .date {
   padding: 0.5em;
+  font-size: 0.8em;
   background-color: #4F5B93;
   color: #cccccc;
 }
@@ -36,11 +38,28 @@ header .main img {
   padding-right: 10px;
 }
 
+section.intro {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2em 1em;
+  text-align: center;
+}
+
 main {
   max-width: 960px;
   margin: 0 auto;
   padding: 1em;
+  background-color: #f2f2f2;
+  box-shadow: 6px 6px 0 0 #666666;
 }
+
+h1, h2, h3 {
+  padding-bottom: 3px;
+  border-bottom: 3px dotted #cccccc;
+}
+
+h2 { border-bottom-width: 3px; }
+h3 { border-bottom-width: 2px; }
 
 table {
   border-collapse: collapse;
@@ -57,4 +76,18 @@ td:first-of-type, th:first-of-type {
 
 th {
   text-align: left;
+}
+
+@media screen and (max-width: 500px) {
+  header .date { display: none; }
+  header .main {
+    font-size: 1.3em;
+    line-height: 1.3em;
+    font-weight: bold;
+    display: block;
+  }
+
+  header .main .rest {
+    display: block;
+  }
 }

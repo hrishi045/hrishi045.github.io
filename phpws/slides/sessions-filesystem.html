@@ -1,0 +1,183 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <title>reveal.js</title>
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/white.css">
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+    <style>
+    
+.reveal pre code {
+  padding: 1.5em !important;
+}
+</style>
+
+    <!-- Printing and PDF exports -->
+    <script>
+      var link = document.createElement( 'link' );
+      link.rel = 'stylesheet';
+      link.type = 'text/css';
+      link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+      document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section><strong>
+          <sub>|</sub>
+          <sup>|</sup>
+          <sub>|</sub>
+          <sup>|</sup>
+          <sub>|</sub>
+          <sup>|</sup>
+          <sub>|</sub>
+          <sup>|</sup>
+          <sub>|</sub>
+          <sup>|</sup></strong>
+        </section>
+        <section>
+          <h2>Sessions and Filesystem</h2>
+        </section>
+        <section>
+          <h3>Cookies</h3>
+          <ul>
+            <li>Stored on the browser</li>
+            <li>Not very secure</li>
+            <li>Don't use for sensitive information</li>
+            <li>Uses: Storing user preferences</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Sessions</h3>
+          <ul>
+            <li>Stored on the server</li>
+            <li>Relatively secure</li>
+            <li>Can be used to store sensitive information</li>
+            <li>Uses: Persistent user sessions</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Filesystem</h3>
+        </section>
+        <section>
+          <h3>Writing to a file</h3>
+          <code data-trim data-noescape><pre>
+            file_put_contents($filename, $data);
+            file_put_contents($fn, $data, [, FILE_APPEND ]);
+          </code></pre>
+        </section>
+        <section>
+          <h3>Reading a file</h3>
+          <code data-trim data-noescape><pre>
+            file_get_contents($filename);
+            file_get_contents($url);
+          </code></pre>
+        </section>
+        <section>
+          <h3>Deleting a file</h3>
+          <code data-trim data-noescape><pre>
+            unlink($filename);
+          </code></pre>
+        </section>
+        <section>
+          <h3>List files in a directory</h3>
+          <code data-trim data-noescape><pre>
+            scandir($directory);
+          </code></pre>
+        </section>
+        <section>
+          <h3>Create a folder</h3>
+          <code data-trim data-noescape><pre>
+            mkdir($path, $perms);
+          </code></pre>
+        </section>
+        <section>
+          <h3>Delete a folder</h3>
+          <code data-trim data-noescape><pre>
+            rmdir($path);
+          </code></pre>
+        </section>
+        <section>
+          <h3>Rename a file</h3>
+          <code data-trim data-noescape><pre>
+            rename($oldname, $newname);
+          </code></pre>
+        </section>
+        <section>
+          <h3>Copy a file</h3>
+          <code data-trim data-noescape><pre>
+            copy($source, $destination);
+          </code></pre>
+        </section>
+        <section>
+          <h3>Check if a file or directory exists</h3>
+          <code data-trim data-noescape><pre>
+            file_exists($path);
+          </code></pre>
+        </section>
+        <section>
+          <h3>Check if the path points to a file</h3>
+          <code data-trim data-noescape><pre>
+            is_file($path);
+          </code></pre>
+        </section>
+        <section>
+          <h3>Check if the path points to a directory</h3>
+          <code data-trim data-noescape><pre>
+            is_dir($path);
+          </code></pre>
+        </section>
+        <section>
+          <h3>File propeties</h3>
+          <code data-trim data-noescape><pre>
+            filesize($path); // Gets file size in bytes
+            filemtime($path); // Last modified time
+            fileowner($path); // Gets owner of file
+            mime_content_type($path); // Gets file MIME type
+          </code></pre>
+        </section>
+      </div>
+    </div>
+
+    <script src="lib/js/head.min.js"></script>
+    <script src="js/reveal.js"></script>
+
+    <script>
+      // More info about config & dependencies:
+      // - https://github.com/hakimel/reveal.js#configuration
+      // - https://github.com/hakimel/reveal.js#dependencies
+      Reveal.initialize({
+        dependencies: [
+          { src: 'plugin/markdown/marked.js' },
+          { src: 'plugin/markdown/markdown.js' },
+          { src: 'plugin/notes/notes.js', async: true },
+          {
+            src: 'plugin/highlight/highlight.js',
+            async: true,
+            callback: function() { hljs.initHighlightingOnLoad(); }
+          },
+          { src: 'plugin/sequence-diagrams/webfont.js' },
+          { src: 'plugin/sequence-diagrams/snap.svg-min.js' },
+          { src: 'plugin/sequence-diagrams/underscore-min.js' },
+          { src: 'plugin/sequence-diagrams/sequence-diagram-min.js' },
+          { src: 'plugin/sequence-diagrams/sequence-diagrams-plugin.js' },
+        ],
+        sequencediagrams: {
+          theme: "simple",
+          useFragments: true,
+          initialize: (function(diagramContainer){
+            console.log("Diagram rendered!");
+          }),
+        },
+      });
+    </script>
+  </body>
+</html>
