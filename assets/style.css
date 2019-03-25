@@ -1,6 +1,16 @@
 body {
   font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+  font-size: 18px;
 }
+
+h1, h2, h3 {
+  font-family: "Playfair Display", serif;
+  font-weight: normal;
+}
+
+h1 { font-size: 2.3em; }
+h2 { font-size: 1.8em; }
+h3 { font-size: 1.5em; }
 
 a {
   color: #000099;
@@ -26,11 +36,16 @@ main {
 
 .header {
   text-align: center;
+  background: #444444;
 }
 
-.header-site-name {
+.header-site-name h1 {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 1.5em;
   font-weight: bold;
-  color: #000000;
+  color: #ffffff;
+  margin: 0;
+  padding: 1em;
 }
 
 .nav {
@@ -71,6 +86,22 @@ main {
 .nav-toggle {
   display: none;
   text-align: center;
+}
+
+main {
+  /* font-size: 1.2em; */
+}
+
+ul li {
+  line-height: 1.5em;
+}
+
+.date {
+  font-size: 0.7em;
+  margin-right: 0.6em;
+  padding: 0.4em;
+  border-radius: 1em;
+  background-color: #cccccc;
 }
 
 .article {
