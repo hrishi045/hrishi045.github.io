@@ -28,3 +28,5 @@ Enable GDM
 `sudo systemctl enable gdm`
 
 You might have luck getting switchable graphics to work on Arch Linux, but battery performance isn't something I'm after, so I'm likely not going to set anything up of that sort. 
+
+Ryzen and NVIDIA laptops are pretty new as of now and it might take a several months to a year before we see distros running on them out of the box. I would advise against getting one right now, if Linux compatibility is something you're after. Getting Linux to work on this laptop is not for the faint of heart. Even if it does work, you're likely to encounter tons of bugs and problems as you use it. Instead, I'd recommend a Ryzen+AMD laptop instead. They're considerably more Linux-friendly. 
